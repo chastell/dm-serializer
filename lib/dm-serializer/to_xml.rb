@@ -102,7 +102,7 @@ module DataMapper
         DataMapper::Inflector.pluralize(DataMapper::Inflector.underscore(self.model.to_s)).tr("/", "-")
       }
 
-      root = xml.root_node(
+      xml.root_node(
         doc,
         opts[:collection_element_name] || default_collection_element_name[],
         {'type' => 'array'}
